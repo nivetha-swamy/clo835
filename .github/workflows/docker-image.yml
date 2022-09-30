@@ -19,7 +19,7 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@master
       with:
-        role-to-assume: arn:aws:sts::678092784151:assumed-role/voclabs/
+        role-to-assume: arn:aws:sts::678092784151:assumed-role/voclabs/user1973674=Nivetha_Narayanaswamy
         aws-region: us-east-1
 
 
