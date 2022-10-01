@@ -32,7 +32,7 @@ jobs:
         ECR_REPOSITORY: myrepo_clo835
         IMAGE_TAG: my_app
       run: |
-        cd /DockerImages/docker_app/
+        cd DockerImages/docker_app
         ls -ltra
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -44,7 +44,7 @@ jobs:
         ECR_REPOSITORY: myrepo_clo835
         IMAGE_TAG: my_db
       run: |
-        cd clo835/docker_db/
+        cd DockerImages/dockerDB
         ls -ltra
         # Docker build
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
