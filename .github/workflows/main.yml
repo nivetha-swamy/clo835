@@ -42,7 +42,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: myrepo_clo835
-        IMAGE_TAG: my_db
+        IMAGE_TAG: mydb
       run: |
         cd DockerImages/dockerDB
         ls -ltra
