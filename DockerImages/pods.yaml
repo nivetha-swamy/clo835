@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapi-deloyment
+  labels:
+    app: flaskapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flaskapi
+  template:
+    metadata:
+      labels:
+        app: flaskapi
+    spec:
+      containers:
+        - name: app
+          image: 678092784151.dkr.ecr.us-east-1.amazonaws.com/myrepo_clo835:my_app
+          args: [DBPORT=3306]
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          
