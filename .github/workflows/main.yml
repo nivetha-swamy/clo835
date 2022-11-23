@@ -29,7 +29,7 @@ jobs:
     - name: Build, test, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: myrepo_clo835
+        ECR_REPOSITORY: myrepo
         IMAGE_TAG: my_app
       run: |
         cd DockerImages/docker_app
@@ -42,7 +42,7 @@ jobs:
     - name: Build, test, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: myrepo_clo835
+        ECR_REPOSITORY: myrepo
         IMAGE_TAG: mysql
       run: |
         cd DockerImages/dockerDB
